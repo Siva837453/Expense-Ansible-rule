@@ -1,5 +1,7 @@
 - name: configure my sql server
   hosts: db
   become: yes
+  vars:
+  - credintials.yaml
   roles:
   - db
