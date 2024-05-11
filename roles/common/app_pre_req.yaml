@@ -9,8 +9,8 @@
     path: "{{app_location}}"
     state: directory
 
-- name: Download and unxip the code
+- name: Download and unzip the code
   ansible.builtin.unarchive:
     src: https://expense-builds.s3.us-east-1.amazonaws.com/expense-{{component}}-v2.zip
-    dest: /app
+    dest: "{{app_location}}"
     remote_src: yes
