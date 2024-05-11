@@ -1,0 +1,5 @@
+- name: configure my sql server
+  hosts: db
+  become: yes
+  roles:
+  - db
