@@ -8,4 +8,4 @@ $ANSIBLE_VAULT;1.1;AES256
 
 
 
-# command ansible-playbook db.yaml --ansible-vault-pass
+# command ansible-playbook db.yaml --ask-vault-pass
