@@ -1,5 +1,10 @@
 - name: create ec2 and s3 
   hosts: localhost
+  vars:
+    instances:
+    - db
+    - backend
+    - frontend
   tasks:
   - name: create ec2 instance
     amazon.aws.ec2_instance:
@@ -11,9 +16,7 @@
         Name: "{{item}}"
 
     loop:
-    - db
-    - backend
-    - frontend
+    - "{{instances}}"
     register: ec2_instance_info
 
   - name: output
