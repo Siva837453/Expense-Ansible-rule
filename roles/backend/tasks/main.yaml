@@ -18,6 +18,8 @@
 
 
 - name: import pre-req file
+  tags:
+  - deployment
   ansible.builtin.import_role:
     name: common
     tasks_from: app_pre_req.yaml
@@ -38,6 +40,8 @@
 #     dest: /app
 #     remote_src: yes
 - name: install npm
+  tags:
+  - deployment
   ansible.builtin.command: npm install
   args:
     chdir: /app
@@ -68,7 +72,9 @@
     daemon_reload: true
 
 - name: Start and enable backend
+  tags:
+  - deployment
   ansible.builtin.service:
     name: backend
-    state: started
+    state: restarted
     enabled: yes
