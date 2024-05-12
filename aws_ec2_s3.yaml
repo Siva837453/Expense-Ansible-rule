@@ -10,8 +10,8 @@
       tags:
       - Name: "{{item}}"
 
-  loop:
-  - db
-  - backend
-  - frontend
+    loop:
+    - db
+    - backend
+    - frontend
 
