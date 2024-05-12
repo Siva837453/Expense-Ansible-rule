@@ -4,5 +4,5 @@
   tasks:
   - name: install postrfix
     ansible.builtin.dnf:
-    name: postfix
-    state: latest
+      name: postfix
+      state: latest
