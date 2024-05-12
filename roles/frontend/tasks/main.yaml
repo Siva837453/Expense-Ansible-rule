@@ -11,7 +11,7 @@
 
 - name: import pre-req file
   tags:
-  deployment
+  - deployment
   ansible.builtin.import_role:
     name: common
     tasks_from: app_pre_req   
