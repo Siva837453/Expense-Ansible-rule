@@ -8,7 +8,7 @@
       image_id: ami-090252cbe067a9e58
       name: "{{item}}"
       tags:
-      - Name: "{{item}}"
+        Name: "{{item}}"
 
     loop:
     - db
