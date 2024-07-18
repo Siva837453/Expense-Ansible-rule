@@ -1,0 +1,9 @@
+- name: configure {{component}}
+  hosts: "{{component}}"
+  become: yes
+  roles:
+  - "{{component}}"
+
+
+
+  #command to execute :  ansible-playbook main.yaml -e component=db
